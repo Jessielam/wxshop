@@ -4,6 +4,7 @@
     <view class="fixed-btns-box" bindtap="onCartTap">
       <view class="fiexd-cart">
         <image src="../../imgs/icon/cart@top.png"></image>
+        <view wx:if="{{cartTotalCounts > 0}}">{{cartTotalCounts}}</view>
       </view>
     </view>
     <view class='detail-topic-img'>
@@ -20,7 +21,7 @@
         </picker>
       </view>
       <view class='"middle-border'></view>
-      <view class='"add-cart-btn'>
+      <view class='"add-cart-btn'  bindtap="onAddToCartTap">
         <text>加入购物车</text>
         <image class="cart-icon" src="../../imgs/icon/cart.png"></image>
       </view>
